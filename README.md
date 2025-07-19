@@ -1,1 +1,1 @@
-# auto-thought
+# auto-thoughts
