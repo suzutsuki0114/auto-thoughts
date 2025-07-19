@@ -2,6 +2,7 @@
 !/.gitignore
 !/LICENSE
 !/data/
+!/data/.gitkeep
 !/auto-thoughts.py
 !/config.py
 !/env.py
