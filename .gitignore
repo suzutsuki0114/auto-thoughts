@@ -1,0 +1,9 @@
+/**
+!/.gitignore
+!/data/
+!/auto-thoughts.py
+!/config.py
+!/env.py
+!/gemini.py
+!/json_manager.py
+!/pdf_to_text_converter.py
