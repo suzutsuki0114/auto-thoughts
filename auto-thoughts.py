@@ -9,6 +9,7 @@ from json_manager import JsonManager
 
 manager = JsonManager()
 browser_path = manager.get_all()["browser_path"]
+email = manager.get_all()["email"]
 class_id = manager.get_all()["class_id"]
 number = manager.get_all()["number"]
 name = manager.get_all()["name"]
@@ -38,17 +39,19 @@ driver = webdriver.Chrome(options=options)
 try:
     driver.get(url)
 
+    email_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/input')
     class_id_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input')
     number_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div/div[1]/input')
     name_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div/div[1]/input')
     thoughts_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div[1]/div[2]/textarea')
-    send_button = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[3]/div[1]/div')
+    # send_button = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[3]/div[1]/div')
 
+    email_field.send_keys(email)
     class_id_field.send_keys(class_id)
     number_field.send_keys(number)
     name_field.send_keys(name)
     thoughts_field.send_keys(thoughts)
-    send_button.click()
+    # send_button.click()
     
     while (True):
         try:

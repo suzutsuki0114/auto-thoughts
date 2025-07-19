@@ -18,9 +18,10 @@ class JsonManager:
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(self.informations, f, ensure_ascii=False, indent=4)
 
-    def write(self, browser_path, class_id, number, name):
+    def write(self, browser_path, email, class_id, number, name):
         self.informations = {
             "browser_path": browser_path,
+            "email": email,
             "class_id": class_id,
             "number": number,
             "name": name,
