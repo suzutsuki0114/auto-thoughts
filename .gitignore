@@ -1,5 +1,6 @@
 /**
 !/.gitignore
+!/LICENSE
 !/data/
 !/auto-thoughts.py
 !/config.py
