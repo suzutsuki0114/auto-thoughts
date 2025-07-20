@@ -1,8 +1,10 @@
 import PyPDF2
+from pathlib import Path
 
 class PDFToTextConverter:
     def pdf_to_text(self, document_path):
-        with open(document_path, 'rb') as pdf_file:
+        path = Path(document_path)
+        with open(path, 'rb') as pdf_file:
 
             pdf_reader = PyPDF2.PdfReader(pdf_file)
 
