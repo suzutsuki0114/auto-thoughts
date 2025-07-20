@@ -8,14 +8,14 @@ from gemini import Gemini
 from json_manager import JsonManager
 
 manager = JsonManager()
+gemini = Gemini()
+converter = PDFToTextConverter()
 browser_path = manager.get_all()["browser_path"]
 email = manager.get_all()["email"]
 class_id = manager.get_all()["class_id"]
 number = manager.get_all()["number"]
 name = manager.get_all()["name"]
 url = input("授業感想のフォームのURLを入力: ")
-gemini = Gemini()
-converter = PDFToTextConverter()
 document_path = input("授業資料のパスを入力: ")
 
 try:
