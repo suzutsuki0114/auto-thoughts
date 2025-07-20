@@ -30,4 +30,3 @@ class JsonManager:
 
     def get_all(self):
         return self.informations
-
