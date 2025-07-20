@@ -1,8 +1,8 @@
 # auto-thoughts
 
-config.py -> auto-thoughts.pyの順番で実行
+`config.py` -> `auto-thoughts.py` の順番で実行してください。
 
-.envでGEMINI_API_KEYを指定すること。APIキーは各自で取得すること
+`.env` で環境変数 `GEMINI_API_KEY` を指定してください。APIキーは各自で取得してください。
 
 必要な外部ライブラリ
  - selenium
