@@ -21,15 +21,15 @@ document_path = input("授業資料のパスを入力: ")
 try:
     document = converter.pdf_to_text(document_path)
 
-except:
-    print("エラーが発生しました")
+except Exception as e:
+    print(f"エラーが発生しました: {e}")
     exit(1)
 
 try:
     thoughts = gemini.thoughts(document)
 
-except:
-    print("エラーが発生しました")
+except Exception as e:
+    print(f"エラーが発生しました: {e}")
     exit(2)
 
 options = Options()
@@ -52,7 +52,7 @@ try:
     name_field.send_keys(name)
     thoughts_field.send_keys(thoughts)
     # send_button.click()
-    
+
     while (True):
         try:
             driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[3]/div[1]/div')
@@ -60,6 +60,10 @@ try:
 
         except:
             break
+
+except Exception as e:
+    print(f"エラーが発生しました: {e}")
+    exit(3)
 
 finally:
     time.sleep(1)
